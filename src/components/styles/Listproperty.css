@@ -21,13 +21,21 @@ top: 0;
 
 
 }
+.listproperty__container{
+    width: 100%;
+}
+.propType{
+    width: 70%;
+  
+    flex-wrap: wrap;
+}
 .navStyle{
     
-background-color: #122B49;
+background-color: hsla(30, 57%, 97%, 1);
 padding: 2rem ;
 
 height: 120px;
-color: white;
+color: #122B49;
 width: 100%;
 border-bottom: 10px solid #EDF2F8;
 
@@ -98,15 +106,26 @@ background-color: #122B49;
     align-items: center;
     position: sticky;
     bottom: 0;
+    
 }
-.next {
-    background-color: linear-gradient(0deg, #122B49, #122B49),
-            linear-gradient(0deg, rgba(79, 79, 79, 0.2), rgba(79, 79, 79, 0.2));
-     color: white;
+.form__footer{
+    background-color: #122B49;
+}
+.nextForm{
+    border-radius: 1px;
+    border: 1px solid #EDF2F8;
+}
+.nextForm:hover{
+    background-color: #121d2b;
 }
 .description{
     height: 100px;
     width: 100%;
+}
+.need_help{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -161,8 +180,14 @@ flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.map{
+    width: 100%;
+    height: 400px;
+    
+}
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 600px){
+   
 .listproperty__header__nav {
     
             display: flex;
@@ -178,6 +203,11 @@ flex-direction: column;
             left: 0;
     
         }
+                .propType {
+                    width: 100%;
+                   
+                    flex-wrap: wrap;
+                }
 .navStyle {
     font-size: 10px;
             background-color: #122B49;
@@ -208,7 +238,7 @@ flex-direction: column;
                                     flex-direction: column;
                                     gap: 2rem;
                                     padding: 1rem;
-                                    overflow: hidden;
+                                   
                                 }
 
                 
@@ -240,4 +270,15 @@ flex-direction: column;
        align-items: center;
        justify-content: center;
    }
+   .add_photo {
+       background-color: hsba(213, 75%, 29%, 1);
+       padding: .5rem 2rem;
+
+   }
+  .propimages__container {
+      padding: 4rem 0rem;
+      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+  }
 }

@@ -7,7 +7,7 @@ const FormFooter = () => {
     return (
         <div className="form__footer">
             <div className="need_help">
-                <p>Need Help? <span className='fw' >Call 9999999999</span></p>
+                <p className='fw'>Need Help? <span className='fw' >Call 9999999999</span></p>
             </div>
             <div className='nextForm' onClick={handleNext}>
                 {formPage < 6 &&

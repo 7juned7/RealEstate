@@ -4,7 +4,7 @@ import Confirmation from '../Confirmation';
 import "../styles/Listproperty.css"
 const Propimages = () => {
     const { formPage } = useContext(PageContext);
-    console.log(formPage)
+    
     return (
         <div className="propimages__container">
             <p>Add Photos / videos to attract more tenants</p>
@@ -14,7 +14,7 @@ const Propimages = () => {
                 <button className='add_photo' >+ Add Photos Now</button>
             </div>
             {
-                formPage === 7 && <>
+                formPage == 7 && <>
                     <Confirmation />
                 </>
             }

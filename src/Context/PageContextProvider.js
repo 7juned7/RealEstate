@@ -199,12 +199,13 @@ export const PageContextProvider = ({ children }) => {
 
 
 
+
     }
 
 
     return (
         <PageContext.Provider
-            value={{ handleNext, formPage, handleChange, values, socialAmenities, additionalFeatures }}
+            value={{ handleNext, formPage, setFormPage, handleChange, values, socialAmenities, additionalFeatures, bhkType, residentalType }}
         >
             {children}
         </PageContext.Provider>

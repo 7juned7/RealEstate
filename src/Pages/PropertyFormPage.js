@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header'
+
 
 
 import PropertyListingForm from '../components/PropertyForm/PropertyListingForm'
@@ -8,7 +8,7 @@ import "../components/styles/Listproperty.css"
 const PropertyFormPage = () => {
     return (<>
 
-        <div className='propformpage'>
+        <div className='continer'>
 
             <PropertyListingForm />
 

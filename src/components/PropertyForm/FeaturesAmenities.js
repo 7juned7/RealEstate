@@ -22,7 +22,7 @@ const FeaturesAmenities = () => {
             <h2>General Features</h2>
             <div>
 
-                <label className='flex'>Non-Veg</label>
+                <label className='labels'> <span>*</span> Non-Veg</label>
                 <div className='flex' >
 
                     <div >
@@ -50,8 +50,8 @@ const FeaturesAmenities = () => {
             </div>
             <div>
 
-                <label className='flex'>Elecricity</label>
-                <div className='flex'>
+                <label className='labels'> <span>*</span>Elecricity</label>
+                <div className='flex' style={{ margin: "1rem 0" }}>
 
                     <div>
 
@@ -79,8 +79,8 @@ const FeaturesAmenities = () => {
             </div>
             <div>
 
-                <label className='flex'>Furnishing</label>
-                <div className='flex' >
+                <label className='labels'><span>*</span>Furnishing</label>
+                <div className='flex' style={{ margin: "1rem 0" }}>
 
                     <div>
 
@@ -120,8 +120,8 @@ const FeaturesAmenities = () => {
             </div>
             <div>
 
-                <label className='flex' >Additional Features</label>
-                <div className='flex' >
+                <label className='labels'  > Additional Features</label>
+                <div className='flex' style={{ margin: "1rem 0" }} >
                     <div>
 
                         <input

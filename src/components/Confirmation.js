@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom';
+import PageContextProvider from '../Context/PageContext';
 
 const Confirmation = () => {
-    let Navigate = useNavigate()
+    const { formPage, setFormPage } = useContext(PageContextProvider)
     const handleClick = () => {
-        Navigate("/preview");
+        setFormPage((formPage + 1))
     }
+
+
     return (
         <div className="confirmation">
 

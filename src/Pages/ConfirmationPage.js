@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Header from '../components/Header'
+import { useNavigate } from 'react-router-dom';
 import "../components/styles/ConfirmationPage.css"
+import PageContext from '../Context/PageContext';
 const ConfirmationPage = () => {
+    const { formPage, setFormPage } = useContext(PageContext)
+    let Navigate = useNavigate()
+    const handleClick = () => {
+        Navigate("/preview");
+    }
+    const handleEdit = () => {
+        setFormPage(0)
+    }
     return (<>
         <Header />
         <div className="ConfirmationPage">
@@ -13,8 +23,8 @@ const ConfirmationPage = () => {
             <p>Dylan Estates</p>
             <div>
 
-                <button className="editPropListing confirmationbtn">Edit Property Listing</button>
-                <button className="prevPropListing confirmationbtn">Preview Property Listing</button>
+                <button className="editPropListing confirmationbtn" onClick={handleEdit}>Edit Property Listing</button>
+                <button className="prevPropListing confirmationbtn" onClick={handleClick} >Preview Property Listing</button>
 
             </div>
         </div>

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import PageContext from '../../Context/PageContext'
 
 import FormFooter from '../Forms/FormFooter'
+import Header from '../Header'
 
 import FeaturesAmenities from './FeaturesAmenities'
 import LocationForm from './LocationForm'
@@ -11,7 +12,7 @@ import Propimages from './Propimages'
 
 const PropertyListingForm = () => {
     const { formPage } = useContext(PageContext);
-    return (<>
+    return (<div className="container" >
 
         <div className="listproperty_container">
             <div className="listproperty__header">
@@ -51,7 +52,7 @@ const PropertyListingForm = () => {
 
             <FormFooter />
         </div >
-    </>
+    </div>
     )
 }
 

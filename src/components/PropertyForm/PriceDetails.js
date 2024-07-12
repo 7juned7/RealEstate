@@ -10,18 +10,19 @@ const PriceDetails = () => {
                     <div className='flex'>
                         <div className='width' >
 
-                            <label className='flex' >Rent <span>*</span></label>
+                            <label className='labels' >Rent <span>*</span></label>
                             <div>
 
                                 <input type="text"
                                     name='rent'
+                                    placeholder='Rent/month'
                                     onChange={handleChange}
                                     value={values.rent} />
                             </div>
                         </div>
                         <div className='width' >
 
-                            <label className='flex' >Security <span>*</span></label>
+                            <label className='labels' >Security <span>*</span></label>
                             <div>
 
                                 <input type="text"
@@ -33,12 +34,12 @@ const PriceDetails = () => {
                     </div>
                     <div className='flex'>
                         <div className='width'>
-                            <label className='flex' >Maintenence</label>
+                            <label className='labels' ><span>*</span>Maintenence</label>
 
                             <div>
 
                                 <select value={values.maintenence} name="maintenence" onChange={handleChange} >
-
+                                    <option >Select</option>
                                     <option >Include in Rent</option>
                                     <option >Extra Maintenance</option>
                                 </select>
@@ -46,7 +47,7 @@ const PriceDetails = () => {
                         </div>
                         <div className=' width'>
 
-                            <label className='flex'>Maintenence</label>
+                            <label className='labels'><span>*</span>Maintenence</label>
                             <div className="flex">
 
                                 <div className='width'>

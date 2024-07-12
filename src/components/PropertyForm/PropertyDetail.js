@@ -10,7 +10,7 @@ const PropertyDetail = () => {
     return (
         <form className='propdetails'>
             <div>
-                <label className='flex' >*Property For:</label>
+                <label className='labels' > <span>*</span> Property For:</label>
                 <div className='flex' style={{ width: "50%" }}>
 
                     <div>
@@ -41,8 +41,8 @@ const PropertyDetail = () => {
             <div>
                 <div >
 
-                    <label className='flex' >* Property Type:</label>
-                    <div className='flex' style={{ margin: "4rem 0" }}>
+                    <label className='labels' ><span>*</span> Property Type:</label>
+                    <div className='flex' style={{ margin: "2rem 0" }}>
                         <div>
                             <input
                                 type="radio"
@@ -97,7 +97,7 @@ const PropertyDetail = () => {
                             onClick={handleChange}
                         >House/Villa</option>
                     </div>}
-                    {values.propertyType === "Commercial" && <div className='flex' style={{ width: "70%", flexWrap: "wrap" }} >
+                    {values.propertyType === "Commercial" && <div className='flex propType '  >
                         <option
                             data-option={"option"}
                             data-name={"residentalType"}
@@ -168,22 +168,28 @@ const PropertyDetail = () => {
                 <div className="grid">
                     <div className='flex'>
                         <div className='width'>
-                            <p>Built up Area <span>*</span></p>
-                            <input
+                            <p className='labels' >Built up Area <span>*</span></p>
+                            <input className='sqFt'
                                 type="number"
                                 value={values.builtUpArea}
                                 name="builtUpArea"
+                                placeholder='Sq.Ft.'
+
+
                                 onChange={handleChange}
                             />
 
 
                         </div >
                         <div className='width'>
-                            <p>Carpet Area <span>*</span></p>
+                            <p className='labels' >Carpet Area <span>*</span></p>
                             <input
+                                className='sqFt'
                                 type="text"
                                 value={values.carpetArea}
                                 name="carpetArea"
+                                placeholder='Sq.Ft.'
+
                                 onChange={handleChange}
                             />
 
@@ -193,21 +199,23 @@ const PropertyDetail = () => {
                     <div className='subGrid'>
                         <div className='flex'>
                             <div>
-                                <p>Property on Floor <span>*</span></p>
+                                <p className='labels' >Property on Floor <span>*</span></p>
                                 <input
                                     type="text"
                                     value={values.propFloorArea}
                                     name="propOnFloor"
                                     onChange={handleChange}
+                                    placeholder="Floor"
                                 />
                             </div>
                             <div>
-                                <p>Total Floor <span>*</span></p>
+                                <p className='labels' >Total Floor <span>*</span></p>
                                 <input
                                     type="text"
                                     value={values.totalFloor}
                                     name="totalFloor"
                                     onChange={handleChange}
+                                    placeholder="Total Floor"
                                 />
 
 
@@ -215,7 +223,7 @@ const PropertyDetail = () => {
                         </div>
 
                         <div >
-                            <label className='flex' >Property Facing </label>
+                            <label className='labels'  > <span>*</span> Property Facing </label>
                             <select style={{ marginTop: ".5rem" }} value={values.propFacing} name="propFacing" onChange={handleChange} >
                                 <option>North</option>
                                 <option>South</option>
@@ -229,7 +237,7 @@ const PropertyDetail = () => {
 
                     </div>
                     <div>
-                        <label className='flex'>BHK Type <span>*</span></label>
+                        <label className='labels'>BHK Type <span>*</span></label>
                         <div className="propAge flex">
                             <option data-type={"bhk"}
                                 name="bhkType"
@@ -278,7 +286,7 @@ const PropertyDetail = () => {
 
                     </div>
                     <div>
-                        <label className='flex' >Balcony <span>*</span></label>
+                        <label className='labels' >Balcony <span>*</span></label>
                         <div className="balcony flex">
                             <option
                                 data-type={"balcony"}
@@ -347,7 +355,7 @@ const PropertyDetail = () => {
 
                 </div>
                 <div >
-                    <label className='flex'>Property Description</label>
+                    <label className='labels'>Property Description <span>*</span> </label>
                     <textarea
                         name="propDes"
                         value={values.propDes}

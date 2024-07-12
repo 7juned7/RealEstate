@@ -7,14 +7,19 @@ import "../components/styles/Homepage.css"
 import PropertyFormPage from './PropertyFormPage'
 
 const Homepage = () => {
-    return (<div className="homepage">
+
+
+    return (
+    <>
         <Header />
+    <div className="homepage container">
         <div div className="homepage__container" >
             <PropertyFormPage />
 
         </div >
 
     </div>
+    </>
     )
 }
 

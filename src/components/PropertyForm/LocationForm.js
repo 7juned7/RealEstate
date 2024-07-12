@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import PageContext from '../../Context/PageContext'
+import MapComponent from '../Map'
 
 const LocationForm = () => {
     const { values, handleChange } = useContext(PageContext)
@@ -13,54 +14,60 @@ const LocationForm = () => {
                     <div className='flex'>
                         <div className='width' >
 
-                            <label className='flex' >Building/Society Name <span>*</span></label>
+                            <label className='labels' >Building/Society Name <span>*</span></label>
                             <div>
 
                                 <input type="text"
                                     value={values.buildingName}
                                     onChange={handleChange}
-                                    name='buildingName' />
+                                    name='buildingName'
+                                    placeholder='Enter Apartment Name' />
                             </div>
                         </div>
                         <div className='width' >
 
-                            <label className='flex' >Locality / Area <span>*</span></label>
+                            <label className='labels' >Locality / Area <span>*</span></label>
                             <div>
 
                                 <input
                                     value={values.locality}
                                     onChange={handleChange}
-                                    name='locality' />
+                                    name='locality'
+                                    placeholder='Eg :sheetal nagar' />
                             </div>
                         </div>
                     </div>
                     <div className='flex'>
                         <div className='width'>
 
-                            <label className='flex' >Landmark / Street Name <span>*</span></label>
+                            <label className='labels' >Landmark / Street Name <span>*</span></label>
                             <div>
 
                                 <input
                                     value={values.landmark}
                                     onChange={handleChange}
-                                    name='landmark' />
+                                    name='landmark'
+                                    placeholder='Prominant Landmark' />
                             </div>
                         </div>
                         <div className='width' >
 
-                            <label className='flex' >City<span>*</span></label>
+                            <label className='labels'>City<span>*</span></label>
                             <div>
-
-                                <input
-                                    value={values.city}
+                                <select value={values.city}
                                     onChange={handleChange}
-                                    name='city' />
+                                    name="city" >
+                                    <option>Select</option>
+                                    <option>Delhi</option>
+                                    <option>Mumbai</option>
+                                </select>
+
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <label>Mark Locality on Map</label>
-
+                    <label>Mark Locality on Map</label>
+                    <div className='map'>
+                        <MapComponent />
                     </div>
 
 

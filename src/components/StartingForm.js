@@ -21,7 +21,7 @@ const StartingForm = () => {
                 </div>
                 <div className="form__content">
                     {formPage === 0 && <> <div>
-                        <label > *I am:</label>
+                        <label className='labels' > <span>*</span> I am:</label>
                         <div className='flex'>
                             <div className='flex'>
                                 <input
@@ -51,7 +51,7 @@ const StartingForm = () => {
                         </div>
                     </div>
                         <div>
-                            <label>Your Name *</label>
+                            <label className='labels'>Your Name <span>*</span></label>
                             <input
                                 type="text"
                                 id="name"
@@ -62,18 +62,21 @@ const StartingForm = () => {
                             />
                         </div>
                         <div className='flexcol'>
-                            <label htmlFor="country">Country</label>
+                            <label className='labels'>Country</label>
                             <select id="country" name="country"
                                 value={values.country}
                                 onChange={handleChange}
 
                             >
-                                <option value="India">India</option>
-                                {/* Add more options for other countries */}
+                                <option >Select</option>
+                                <option >India</option>
+                                <option >PAKISTAN</option>
+                                <option >AUSTRALIA</option>
+                                <option >USA</option>
                             </select>
                         </div>
                         <div>
-                            <label>Phone</label>
+                            <label className='labels' >Phone <span>*</span> </label>
                             <input
                                 type="number"
                                 id="phone"
@@ -84,7 +87,7 @@ const StartingForm = () => {
 
                             />
                             <div>OR</div>
-                            <label htmlFor="email">Email</label>
+                            <label className='flex' htmlFor="email">Email</label>
                             <input
                                 type="email"
                                 id="email"

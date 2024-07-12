@@ -3,15 +3,15 @@
     flex-direction: column;
     gap: 2rem;
    padding: 2rem;
-   overflow: hidden;
-   
-   
+  
+   width: -webkit-fill-available;
     
 }
+
 .address{
     display: flex;
     justify-content: space-between;
-    
+   
 }
 
 .overviews{
@@ -24,6 +24,7 @@
     
 }
 .amenities{
+   
     display: flex;
     gap: 5rem;
     margin: 2rem 0;
@@ -36,11 +37,12 @@
     gap: 2rem;
     margin: 2rem 0;
 }
-.rendered_amenities{
 
-
-}
 .rendered_amenities>.socialAmenities>input{
    
    display: none;
+}
+
+@media only screen and (max-width: 900px){
+
 }

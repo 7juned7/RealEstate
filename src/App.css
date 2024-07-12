@@ -5,7 +5,14 @@
   list-style: none;
 }
 
+.labels{
+  
 
+display: flex;
+}
+span{
+  color: red;
+}
  h1 {
    font-family: Merriweather Sans;
    font-size: 32px;
@@ -19,6 +26,7 @@
     font-weight: 300;
     line-height: 20.11px;
     text-align: left;
+    
  }
  h2{
   font-family: Merriweather Sans;
@@ -30,6 +38,7 @@
 .fw{
 font-weight: 600;
 font-style: Inter;
+color: white;
 }
 .width{
   width: 100%;
